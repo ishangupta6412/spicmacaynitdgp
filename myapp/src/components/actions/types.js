@@ -1,0 +1,19 @@
+export const REGISTER_USER='registeruser';
+export const LOGIN_USER="login_user"
+export const logoutuser="logout"
+export const ADDDETAIL="adddetails"
+export const ADDRECORD="addrecord"
+export const GETRECORD="getrecord"
+export const  AUTH_USER="authuser"
+export const  ALLALUM="allalum"
+export const  PASS="pass"
+export const SEARCHYR="searchyr"
+export const ADDNEWS="addnews"
+export const ALLNEWS="allnews"
+export const  FORGET="forget"
+export const ADDEDUCATION="addeducation"
+export const REGISTER_ALUM='registeralum'
+export const  ADDEVENTS="addevents"
+export const NOTIFICATION='notification'
+
+export const ALLGALLERY='allgallery'

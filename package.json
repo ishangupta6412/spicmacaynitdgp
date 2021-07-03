@@ -1,0 +1,56 @@
+{
+  "name": "SPICMACAYWEBSITE",
+  "version": "1.0.0",
+  "description": "IT IS AN INITIATIVE BY SPICMACAY",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.1",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
+    "cloudinary": "^1.15.0",
+    "compression": "^1.7.4",
+    "concurrently": "^3.6.1",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "is-date-format": "^0.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mdbootstrap": "^4.19.1",
+    "mdbreact": "^4.27.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.1",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.3",
+    "nodemon": "^1.19.2",
+    "prop-types": "^15.7.2",
+    "redux": "^4.0.4",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "validator": "^11.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "repo": "npm run start --prefix myapp",
+    "dev": "concurrently \"npm run server\" \"npm run repo\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix myapp && npm run build --prefix myapp"
+  },
+  "engines": {
+    "node": "10.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spicmacayitnitdgp/Spicmacay-dynamic"
+  },
+  "keywords": [],
+  "author": "SAUMYAJEET MUKHERJEE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spicmacayitnitdgp/Spicmacay-dynamic/issues"
+  },
+  "homepage": "https://github.com/spicmacayitnitdgp/Spicmacay-dynamic#readme"
+}

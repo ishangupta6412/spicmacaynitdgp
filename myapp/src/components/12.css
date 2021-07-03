@@ -1,0 +1,186 @@
+  
+  .timeline {
+    position: relative;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #123C69;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .containeri {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .containeri::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #123C69;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  h2{
+    font-family:'Times New Roman', Times, serif;
+    text-align:center
+  }
+  #parat{
+    font-family:'Times New Roman', Times, serif;
+    font-weight:200;
+    font-size:20px;
+  }
+  /* Place the container to the left */
+  .left {
+    left: 0%;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #123C69;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #123C69;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #123C69 transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    /* border:2px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+    /* height:300px */
+  }
+  .content:hover {
+    box-shadow: 0 8px 16px 0 rgba(70, 2, 2, 0.8);
+    z-index:20 !important
+  }
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+  h4{
+    font-size:16px;
+    font-weight: 600;
+    color:black;
+    text-align:center;
+  }
+  p{
+    color:black;
+    font-weight: 600;
+    text-align:center;
+  }
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .containeri {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .containeri::before {
+    left: 60px;
+    border: medium solid #123C69;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #123C69 transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+
+  @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+    /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+      }
+      
+      /* Full-width containers */
+      .containeri {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      }
+      
+      /* Make sure that all arrows are pointing leftwards */
+      .containeri::before {
+      left: 60px;
+      border: medium solid #123C69;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #123C69 transparent transparent;
+      }
+    
+      /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+      left: 15px;
+      }
+      
+      /* Make all right containers behave like the left ones */
+      .right {
+      left: 0%;
+      }
+}
